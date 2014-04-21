@@ -5,7 +5,8 @@ This repository contains the full source to my contribution to
 the 2014 24 Hours Puzzle Championship. The idea is to give other
 authors the option of reusing the templates in the future.
 
-See [puzzlespdf] for a link to the resulting puzzle booklet.
+See this [blog post][puzzlespdf] for a link to the resulting
+puzzle booklet.
 
 Overview
 --------
