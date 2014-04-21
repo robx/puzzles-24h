@@ -1,0 +1,16 @@
+type: lits
+gridtype: square
+puzzle: |
+  aaaaaa
+  abbbba
+  cbcbbd
+  cccddd
+  eeeeed
+  eeeedd
+solution: |
+  ...XXX
+  ..XX.X
+  X..XXX
+  XXX..X
+  ..XXXX
+  ...X.X

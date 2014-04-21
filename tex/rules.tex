@@ -1,0 +1,120 @@
+\documentclass[a4paper]{article}
+\usepackage[top=4cm,bottom=1.5cm,left=1.5cm,right=1.5cm]{geometry}
+
+\usepackage[top=4cm,bottom=1.5cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{DejaVuSerifCondensed}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+
+\usepackage{titlesec}
+
+\titleformat*{\paragraph}{\large\bfseries}
+\titlespacing{\paragraph}{%
+  0pt}{%              left margin
+  0pt}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+\input{defs.tex}
+\input{ruledef.tex}
+\input{frames.tex}
+
+\newcommand{\expl}[1]{\includegraphics{../#1.pdf}}
+
+\newcommand{\puzzledef}[3]{%
+\noindent{
+\centering
+\begin{tabularx}{\textwidth}{X c}%
+\paragraph{#1}%
+#2
+&
+\raisebox{0pt}{\raisebox{-\height}{\expl{#3}}}%
+\end{tabularx}
+\\[1ex]
+}}%
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\lhead{\pageframe}
+
+\begin{document}
+\pagestyle{empty}
+\ititleframe
+\mytitlepage{Instructions for puzzles by Robert Vollmert}
+
+\newpage
+\pagestyle{fancy}
+
+\puzzledef{LITS (30)}{\ruleslits}{lits-example}
+
+\vspace{3em}
+
+\puzzledef{LITS+ (15+30+40+60)}{\ruleslitsplus}{litsplus-example}
+
+\vspace{3em}
+
+\puzzledef{Geradeweg (30+30+30+60)}{\rulesgeradeweg}{geradeweg-example}
+
+\vspace{3em}
+
+\puzzledef{Nurikabe (30+60)}{\rulesnurikabe}{nurikabe-example}
+
+\vspace{3em}
+
+\puzzledef{Latin Tapa (40)}{\ruleslatintapa}{latintapa-example}
+
+\vspace{3em}
+
+\puzzledef{Sudoku (20)}{\rulessudoku}{sudoku-example}
+
+\vspace{3em}
+
+\puzzledef{Thermo-Sudoku (90)}{\rulesthermosudoku}{sudoku-thermo-example}
+
+\vspace{3em}
+
+\puzzledef{Row-Kropki Pyramid (30+40)}{\rulesrowkropkipyramid}{pyramid-kropki-example}
+
+\vspace{3em}
+
+\puzzledef{Slither Link (30)}{\rulesslitherlink}{slitherlink-example}
+
+\vspace{3em}
+
+\puzzledef{Liar Slither Link (90)}{\rulesliarslitherlink}{slitherlink-liar-example}
+
+\vspace{3em}
+
+\puzzledef{Tight-Fit Skyscrapers (20)}{\rulesskyscraperstightfit}{skyscraper-tightfit-example}
+
+\vspace{3em}
+
+\puzzledef{Word Loop (35)}{\ruleswordloop}{wordloop-example}
+
+\vspace{3em}
+
+\puzzledef{Word Search (40)}{\ruleswordsearch}{wordsearch-example}
+
+\vspace{3em}
+
+\puzzledef{Curve Data (30)}{\rulescurvedata}{curvedata-example}
+
+\vspace{3em}
+
+\puzzledef{Double Back (30)}{\rulesdoubleback}{doubleback-example}
+
+\vspace{3em}
+
+\puzzledef{Slalom (30)}{\rulesslalom}{slalom-example}
+
+\vspace{3em}
+
+\puzzledef{Compass (20+30)}{\rulescompass}{compass-example}
+
+\end{document}

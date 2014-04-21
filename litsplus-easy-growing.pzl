@@ -1,0 +1,20 @@
+type: litsplus
+puzzle: |
+  abxdfmmn
+  bbxeflmn
+  bcceflnn
+  aaceeloo
+  aackklko
+  ahhhkkko
+  ggghhiio
+  ggghiiii
+solution: |
+  .x.....x
+  xx.x.x.x
+  x..x.xxx
+  xx.xxx.x
+  x....x.x
+  x.xx...x
+  xx.x.xxx
+  .xxxxx..
+

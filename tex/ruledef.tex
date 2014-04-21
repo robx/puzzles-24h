@@ -1,0 +1,136 @@
+\newcommand{\ruleslits}{%
+Shade some cells, such that each area has four shaded cells, 
+forming a tetromino (four orthogonally connected cells). All
+shaded cells must be connected orthogonally, and there can't
+be any 2-by-2 square consisting entirely of shaded cells.
+Furthermore, no two of the same type of tetromino touch along
+an edge. Here, ``same'' is up to rotation and reflection, the
+four types are the L, I, T and S tetrominos.}
+
+\newcommand{\ruleslitsplus}{%
+Shade some cells, such that the shaded cells within an area,
+if any, form a single tetromino (four orthogonally connected cells).
+All shaded cells must be connected orthogonally, and there can't
+be any 2-by-2 square consisting entirely of shaded or entirely
+of unshaded cells.
+Furthermore, no two of the same type of tetromino touch along
+an edge. Here, ``same'' is up to rotation and reflection, the
+four types are the L, I, T and S tetrominos.
+
+\vspace{0.5em}
+This differs from standard LITS in that some areas may remain empty, 
+and the no-2-by-2 rule also applies to white cells.}
+
+\newcommand{\rulesgeradeweg}{%
+Draw a loop that travels horizontally and vertically from cell center
+to cell center and that visits each clue, such that the length of
+every straight segment that meets a clue is equal to that clue.}
+
+\newcommand{\rulesnurikabe}{%
+Shade some cells such that all shaded cells are connected
+orthogonally, and there is no 2-by-2 square that consists
+entirely of shaded cells.
+The shaded cells divide the unshaded cells
+into islands of orthogonally connected cells. Each clue
+must be part of exactly one island, and the size of that
+island must be equal to the clue.}
+
+\newcommand{\ruleslatintapa}{%
+Write letters in some cells such that all letter cells
+are connected orthogonally, and such that there is no
+2-by-2 square of lettered cells. All rows and columns
+must contain the same set of letters. Words in clue
+cells must be readable clockwise around the clue,
+without gaps and separated by non-letter cells. The
+clue cells count as non-letter cells.}
+
+\newcommand{\rulessudoku}{%
+Place a number from 1 to 9 in each cell, such that
+every row, column and outlined 3-by-3 square contains
+every number from 1 to 9.}
+
+\newcommand{\rulesthermosudoku}{%
+Place a number from 1 to 9 in each cell, such that
+every row, column and outlined 3-by-3 square contains
+every number from 1 to 9. Numbers along a thermometer
+must increase strictly from the bulb.}
+
+\newcommand{\rulesrowkropkipyramid}{%
+Place a number from 1 to 9 in each cell, such that for
+any two horizontal neighbours, the number between and
+above the two is their sum or their difference. In gray
+rows, all numbers must be distinct, while in white rows,
+there must be at least one pair of duplicate numbers.
+
+\vspace{0.5em}
+If an edge between horizontal neighbours is marked with
+a white dot, the difference between the two numbers is 1.
+If it is marked with a black dot, one number is double the
+other number. If there is no mark, neither of the above
+conditions apply.}
+
+\newcommand{\rulesslitherlink}{%
+Draw a single loop consisting of vertical and horizontal
+segments between dots that does not touch or cross itself.
+Clue numbers indicate the number of adjacent edges that
+are used by the loop.}
+
+\newcommand{\rulesliarslitherlink}{%
+Draw a single loop consisting of vertical and horizontal
+segments between dots that does not touch or cross itself.
+Clue numbers indicate the number of adjacent edges that
+are used by the loop, but: In every row and every column,
+there is precisely one clue that is incorrect.}
+
+\newcommand{\rulesskyscraperstightfit}{%
+Place a number between 1 and 6 (1 and 5 in the example)
+in each cell (one in each
+triangle for divided cells) such that each row and each
+column contains every number. Clues outside the grid
+indicate the number of digits that can be seen when looking
+into the corresponding row or column. Larger numbers block
+the sight to smaller numbers.}
+
+\newcommand{\ruleswordloop}{%
+Place each of the given words in the grid vertically,
+horizontally or diagonally in any direction, such that
+there is at most one letter in each cell, such that all
+given letters are used by one of the words, and such
+that all words form a single loop, each end of each
+word being an end of one other word. Words may intersect
+at any point, can touch or use the same letter multiple
+times, and adjacent letters are allowed to form
+words that aren't part of the loop.}
+
+\newcommand{\ruleswordsearch}{%
+Complete the grid by putting letters in the unfilled squares,
+and find each of the given terms (without spaces) in the grid.
+The terms may read vertically, horizontally or diagonally in any
+direction.}
+
+\newcommand{\rulescurvedata}{%
+Draw lines that connect cell centers horizontally or
+vertically, such that each cell is connected to precisely
+one cell with a clue. The shape of lines connected to a
+clue must be like the clue in that the relative position
+of horizontal and vertical segments and turns must be the
+same, without rotations or reflections. The lengths of
+straight segments may vary, but must not be 0.}
+
+\newcommand{\rulesdoubleback}{%
+Draw a single loop travelling orthogonally from cell centre
+to cell centre that visits each cell, and that enters and
+exits each area exactly twice each.}
+
+\newcommand{\rulesslalom}{%
+Draw a diagonal in each cell such that each clue is equal
+to the number of diagonals meeting that vertex, and such
+that the diagonals don't enclose any area completely.}
+
+\newcommand{\rulescompass}{%
+Split the grid into orthogonally connected regions, one for
+each clue. The number at the top of a clue must be equal to
+the number of cells within the region that lie above the clue,
+regardless of horizontal position. The other numbers work
+analogously for cells to the right, below and to the left
+of the clue.}

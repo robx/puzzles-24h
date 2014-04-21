@@ -1,0 +1,42 @@
+type: latintapa
+puzzle:
+  grid: |
+    .a.b.......
+    .....c....d
+    .....x.....
+    ...........
+    ...........
+    .e..f.g..h.
+    ...........
+    ...........
+    .....i.....
+    j....k.....
+    .......l.m.
+  clues:
+    a: [SALS]
+    b: [L, S]
+    c: [A, LATIN]
+    d: ["N"]
+    x: [IN, NIA]
+    e: [NILT]
+    f: [STISTA]
+    g: [LNAITS]
+    h: [ANSL, I]
+    i: [L, T]
+    j: [TNST]
+    k: [LSLNT]
+    l: [SL]
+    m: [IAI]
+solution: |
+  S   LATIN  
+  LAS   I TN 
+    ISA NTL  
+  A L IN  ST 
+  ILT  S   AN
+  N  A T LI S
+     TSIAN  L
+   INL   A ST
+  TN I   SAL 
+   S NT L  IA
+   TA NLS   I
+

@@ -1,0 +1,116 @@
+type: curvedata
+puzzle:
+  grid: |
+    ..........
+    ....f.....
+    .....n....
+    .u....v...
+    .......p..
+    ........wi
+    .........y
+    ...x...t..
+    ..z.......
+    .l........
+  clues:
+    f: |2
+        o-o
+        |  
+      o-o  
+        |  
+        o  
+    n: |2
+        o
+        |
+      o-o
+      |  
+      o  
+      |  
+      o  
+    u: |
+      o-o
+      |  
+      o  
+      |  
+      o-o
+    v: |2
+          o
+          |
+          o
+          |
+      o-o-o
+    p: |
+      o-o
+      | |
+      o-o
+      |  
+      o  
+    w: |2
+        o-o
+        |  
+      o-o  
+      |    
+      o    
+    i: |
+      o
+      |
+      o
+      |
+      o
+      |
+      o
+      |
+      o
+    y: |2
+        o
+        |
+      o-o
+        |
+        o
+        |
+        o
+    x: |2
+        o  
+        |  
+      o-o-o
+        |  
+        o  
+    t: |
+      o-o-o
+        |  
+        o  
+        |  
+        o  
+    z: |
+      o-o  
+        |  
+        o  
+        |  
+        o-o
+    l: |
+      o  
+      |  
+      o  
+      |  
+      o  
+      |  
+      o-o
+solution: |
+  o-o-o-o-o-o-o-o o-o
+  |             | |  
+  o o-o o-o o o o o o
+  | |   |   | | | | |
+  o o o-o o-o o o o o
+  | |   | |   | | | |
+  o o-o o o o-o o o o
+  |             | | |
+  o-o-o-o-o-o-o-o o o
+  |               | |
+  o o o-o-o-o-o-o-o o
+  | | |              
+  o o o o-o-o-o-o-o o
+    |           |   |
+  o-o-o-o-o-o-o o o-o
+    |               |
+  o o o-o-o-o-o-o-o o
+  |               |  
+  o-o-o-o-o-o-o-o o-o

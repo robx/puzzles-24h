@@ -1,0 +1,211 @@
+\documentclass{article}
+
+\usepackage[top=4cm,bottom=1.5cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{DejaVuSerifCondensed}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{titlesec}
+
+\pdfminorversion=4
+
+\titleformat*{\paragraph}{\large\bfseries}
+\titlespacing{\paragraph}{%
+  0pt}{%              left margin
+  0pt}{% space before (vertical)
+  1em}%               space after (horizontal)
+
+
+\input{frames.tex}
+\input{defs.tex}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\lhead{\pageframe}
+
+\begin{document}
+\pagestyle{empty}
+\titleframe
+\mytitlepage{Puzzles by Robert Vollmert}
+
+\newpage
+\pagestyle{fancy}
+
+\input{ruledef.tex}
+
+\newcommand{\expl}[1]{\includegraphics[scale=0.5]{../#1.pdf}}
+
+\newcommand{\puzzledef}[3]{%
+\noindent{
+\centering
+\begin{tabularx}{\textwidth}{X c}%
+\paragraph{#1}%
+#2
+&
+\raisebox{0pt}{\raisebox{-\height}{\expl{#3}}}%
+\end{tabularx}
+\\[1ex]
+}}%
+
+\newcommand{\puzzledefvert}[4]{%
+\noindent\adjustbox{padding=1.5ex}{%
+\begin{minipage}{#4}
+\paragraph{#1}%
+#2
+\\[1ex]
+\begin{center}
+\expl{#3}%
+\end{center}
+\end{minipage}
+}}%
+
+\newcommand{\puzzleat}[3]{%
+\begin{tikzpicture}[remember picture, overlay, shift={(dA)}]
+%   \draw (0,0) grid (22,30);
+   \node[inner sep=0] at #2 (x) {\includegraphics[trim=0.2cm 0.2cm 0.2cm 0.2cm]{../#1.pdf}};
+   \node[yshift=0.25cm, anchor=south east] at (x.north east) {\Large #3};
+%   \node[xshift=0.25cm, anchor=north west] at (x.north east) {\Large #3};
+\end{tikzpicture}}%
+
+\newcommand{\puzzle}[2]{%
+\begin{tikzpicture}
+   \node[inner sep=0] (x) {\includegraphics[trim=0.2cm 0.2cm 0.2cm 0.2cm]{../#1.pdf}};
+   \node[yshift=0.25cm, anchor=south east] at (x.north east) {\Large #2};
+\end{tikzpicture}}%
+
+\newcommand{\puzzler}[2]{%
+\begin{tikzpicture}
+   \node[inner sep=0] (x) {\includegraphics[trim=0.2cm 0.2cm 0.2cm 0.2cm]{../#1.pdf}};
+   \node[xshift=0.25cm, anchor=north west] at (x.north east) {\Large #2};
+\end{tikzpicture}}%
+
+\newcommand{\puzzlec}[2]{%
+\begin{center}
+\puzzle{#1}{#2}
+\end{center}}
+
+\newcommand{\puzzlerc}[2]{%
+\begin{center}
+\puzzler{#1}{#2}
+\end{center}}
+
+\puzzleat{lits-1}{(13,16.5)}{30}
+\puzzleat{litsplus-easy-growing}{(13,6)}{15}
+
+\puzzledefvert{LITS}{\ruleslits}{lits-example}{0.35\textwidth}
+
+\vspace{3cm}
+\puzzledefvert{LITS+}{\ruleslitsplus}{litsplus-example}{0.35\textwidth}
+
+\newpage
+
+\puzzleat{litsplus-x}{(4,18.2)}{30}
+\puzzleat{litsplus-snakes}{(13.5,17)}{40}
+\puzzleat{litsplus-3x5}{(13.1,5.5)}{60}
+
+\vspace{10cm}
+\puzzledefvert{LITS+}{\ruleslitsplus}{litsplus-example}{0.35\textwidth}
+
+\newpage
+\puzzledef{Geradeweg}{\rulesgeradeweg}{geradeweg-example}
+
+\puzzleat{geradeweg-anti}{(5,4.5)}{30}
+\puzzleat{twin-gn-geradeweg}{(13.5,4.5)}{30}
+\puzzlec{geradeweg-pyramids}{30}
+
+\newpage
+
+\puzzledef{Geradeweg}{\rulesgeradeweg}{geradeweg-example}
+
+\vspace{3cm}
+\puzzlec{geradeweg-24}{60}
+
+\newpage
+\puzzledef{Nurikabe}{\rulesnurikabe}{nurikabe-example}
+
+\puzzlec{twin-gn-nurikabe}{30}
+\puzzlec{nurikabe1}{60}
+
+\newpage
+\puzzledef{Latin Tapa}{\ruleslatintapa}{latintapa-example}
+
+\vspace{3cm}
+\puzzlec{latintapa}{40}
+
+\newpage
+\puzzleat{sudoku-2}{(13.5,17)}{20}
+\puzzleat{sudoku-thermo-cva-easier}{(13.5,5.5)}{90}
+
+\vspace{2cm}
+\puzzledefvert{Sudoku}{\rulessudoku}{sudoku-example}{0.35\textwidth}
+
+\vspace{6cm}
+\puzzledefvert{Thermo-Sudoku}{\rulesthermosudoku}{sudoku-thermo-example}{0.35\textwidth}
+
+\newpage
+\puzzledef{Row-Kropki Pyramid}{\rulesrowkropkipyramid}{pyramid-kropki-example}
+
+\vspace{1cm}
+\puzzlec{pyramid-kropki-1}{30}
+
+\vspace{1cm}
+\puzzlec{pyramid-kropki-2}{40}
+
+\newpage
+
+\puzzleat{slither-easy}{(13.5,17)}{30}
+\puzzleat{slither-liar}{(13.5,5.5)}{90}
+
+\vspace{1cm}
+\puzzledefvert{Slither Link}{\rulesslitherlink}{slitherlink-example}{0.35\textwidth}
+
+\vspace{5.5cm}
+\puzzledefvert{Liar Slither Link}{\rulesliarslitherlink}{slitherlink-liar-example}{0.35\textwidth}
+
+\newpage
+\puzzledefvert{Tight-Fit Skyscrapers}{\rulesskyscraperstightfit}{skyscraper-tightfit-example}{0.35\textwidth}
+\puzzleat{skyscraper-tightfit}{(13.5,19)}{20}
+
+\puzzledef{Double Back}{\rulesdoubleback}{doubleback-example}
+\puzzlerc{doubleback-S}{40}
+
+\newpage
+\puzzledef{Word Loop}{\ruleswordloop}{wordloop-example}
+
+\vspace{3cm}
+\puzzlec{wordloop-colors}{35}
+
+\newpage
+\puzzledef{Word Search}{\ruleswordsearch}{wordsearch-example}
+
+\vspace{3cm}
+\puzzlec{wordsearch-crawlgods}{40}
+
+\newpage
+\puzzleat{curvedata-pento}{(13.5,17)}{30}
+\puzzleat{slalom3}{(13.5,6)}{30}
+
+\vspace{1.5cm}
+\puzzledefvert{Curve Data}{\rulescurvedata}{curvedata-example}{0.35\textwidth}
+
+\vspace{4.5cm}
+\puzzledefvert{Slalom}{\rulesslalom}{slalom-example}{0.35\textwidth}
+
+
+
+
+\newpage
+\puzzledef{Compass}{\rulescompass}{compass-example}
+
+\puzzlec{compass-easy}{20}
+
+\vspace{1ex}
+\puzzlec{compass-12}{30}
+
+\end{document}

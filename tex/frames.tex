@@ -1,0 +1,98 @@
+\newcommand{\titleframe}{%
+\begin{tikzpicture}[remember picture, overlay]
+    \node (A) [xshift=1.25cm,yshift=1.25cm] at (current page.south west) {};
+    \node (B) [xshift=1.25cm,yshift=-1.25cm] at (current page.north west) {};
+    \node (C) [xshift=-1.25cm,yshift=-1.25cm] at (current page.north east) {};
+    \node (D) [xshift=-1.25cm,yshift=1.25cm] at (current page.south east) {};
+
+    \coordinate (cA) at (A);
+    \coordinate (cB) at (B);
+    \coordinate (cC) at (C);
+    \coordinate (cD) at (D);
+
+    \coordinate[xshift=1mm, yshift=1mm] (dA) at (A);
+    \coordinate[xshift=1mm, yshift=-1mm] (dB) at (B);
+    \coordinate[xshift=-1mm, yshift=-1mm] (dC) at (C);
+    \coordinate[xshift=-1mm, yshift=1mm] (dD) at (D);
+
+    \coordinate (e) at ($ (dB)!0.35!(dC) $);
+    \coordinate (f) at ($ (dB)!0.65!(dC) $);
+    \coordinate (g) at ($ (dB) + (0,-2.5cm) $);
+    \coordinate (h) at ($ (dC) + (0,-2.5cm) $);
+
+    \draw[ultra thick] (cA) -- (cB) -- (cC) -- (cD) -- cycle;
+    \draw[thin] (dA) -- (dB) -- (dC) -- (dD) -- cycle;
+    \draw[thin] (g) -- (h);
+    \draw[thin] (e) -- ++(0,-2.5cm)  (f) -- ++(0,-2.5cm);
+
+    \tikzstyle{label} = [font=\Large\scshape];
+
+    \node[label, below right=3mm of dB] {Name};
+    \node[label, below right=3mm of e] {Country};
+    \node[label, below right=3mm of f] {Points};
+\end{tikzpicture}}
+
+\newcommand{\ititleframe}{%
+\begin{tikzpicture}[remember picture, overlay]
+    \node (A) [xshift=1.25cm,yshift=1.25cm] at (current page.south west) {};
+    \node (B) [xshift=1.25cm,yshift=-1.25cm] at (current page.north west) {};
+    \node (C) [xshift=-1.25cm,yshift=-1.25cm] at (current page.north east) {};
+    \node (D) [xshift=-1.25cm,yshift=1.25cm] at (current page.south east) {};
+
+    \coordinate (cA) at (A);
+    \coordinate (cB) at (B);
+    \coordinate (cC) at (C);
+    \coordinate (cD) at (D);
+
+    \coordinate[xshift=1mm, yshift=1mm] (dA) at (A);
+    \coordinate[xshift=1mm, yshift=-1mm] (dB) at (B);
+    \coordinate[xshift=-1mm, yshift=-1mm] (dC) at (C);
+    \coordinate[xshift=-1mm, yshift=1mm] (dD) at (D);
+
+    \draw[ultra thick] (cA) -- (cB) -- (cC) -- (cD) -- cycle;
+    \draw[thin] (dA) -- (dB) -- (dC) -- (dD) -- cycle;
+\end{tikzpicture}}
+
+\newcommand{\pageframe}{%
+\begin{tikzpicture}[remember picture, overlay]
+    \node (A) [xshift=1.25cm,yshift=1.25cm] at (current page.south west) {};
+    \node (B) [xshift=1.25cm,yshift=-1.25cm] at (current page.north west) {};
+    \node (C) [xshift=-1.25cm,yshift=-1.25cm] at (current page.north east) {};
+    \node (D) [xshift=-1.25cm,yshift=1.25cm] at (current page.south east) {};
+
+    \coordinate (cA) at (A);
+    \coordinate (cB) at (B);
+    \coordinate (cC) at (C);
+    \coordinate (cD) at (D);
+
+    \coordinate[xshift=1mm, yshift=1mm] (dA) at (A);
+    \coordinate[xshift=1mm, yshift=-1mm] (dB) at (B);
+    \coordinate[xshift=-1mm, yshift=-1mm] (dC) at (C);
+    \coordinate[xshift=-1mm, yshift=1mm] (dD) at (D);
+
+    \coordinate (e) at ($ (dB)!0.42!(dC) $);
+    \coordinate (f) at ($ (dB)!0.58!(dC) $);
+    \coordinate (g) at ($ (dB) + (0,-2.5cm) $);
+    \coordinate (h) at ($ (dC) + (0,-2.5cm) $);
+    \coordinate (i) at ($ (e)!0.5!(f) + (0,-1.25cm) $);
+    \coordinate (j) at ($ (dB)!0.5!(e) + (0,-1.25cm) $);
+    \coordinate (k) at ($ (f)!0.5!(dC) + (0,-1.25cm) $);
+
+    \draw[ultra thick] (cA) -- (cB) -- (cC) -- (cD) -- cycle;
+    \draw[thin] (dA) -- (dB) -- (dC) -- (dD) -- cycle;
+    \draw[thin] (g) -- (h);
+    \draw[thin] (e) -- ++(0,-2.5cm)  (f) -- ++(0,-2.5cm);
+
+    \tikzstyle{t} = [align=center, font=\scshape];
+
+    \node[t] at (j) {
+        {\bfseries\large 14th 24 Hours} \\
+        {\bfseries\large Puzzle Championship} \\
+        March 21-23, 2014 \\
+        Hotel Amadeus \\
+        Budapest};
+    \node[t] at (i)
+        {\includegraphics[height=2cm]{24hlogo.jpg}};
+    \node[t] at (k) {Puzzles by \\ Robert Vollmert};
+\end{tikzpicture}}
+
