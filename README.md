@@ -15,7 +15,7 @@ The repository includes source files for the full set of puzzles
 and example puzzles, as well as the LaTeX sources for the
 instruction, puzzle and solution booklets.
 
-# Puzzles and examples
+### Puzzles and examples
 
 For each puzzle type, e.g. Geradeweg, there is an example puzzle
 definition `geradeweg-example.pzl` as well as one or more
@@ -28,7 +28,7 @@ appropriately, generating PDF files `geradeweg-example.pdf`,
 If you want to use puzzle files that are already in PDF format,
 just copy them there.
 
-# LaTeX templates
+### LaTeX templates
 
 The `tex/` subdirectory contains a couple of auxiliary LaTeX fragment
 files, as well as the documents `rules.tex`, `puzzles.tex`,
